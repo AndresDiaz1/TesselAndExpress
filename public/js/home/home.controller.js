@@ -6,18 +6,25 @@ angular.module('home')
         $scope.toggleLed=function(){
             $http.get(API_CONSTANTS.TesselIP + API_CONSTANTS.Leds + '0')
                 .success(function(response){
-
+                    console.log("La respuesta fue: ", response)
                 }).error(function(e){
                 console.log("ocurrio un error",e);
             });
         }
 
         $scope.readLight=function(){
-            console.log("leer luz");
+            $http.get(API_CONSTANTS.TesselIP + API_CONSTANTS.Analog)
+                .success(function(response){
+                    console.log("La respuesta fue: ", response)
+                }).error(function(e){
+                console.log("ocurrio un error",e);
+            });
         }
 
         $scope.readAccelerometer=function(){
             console.log("Leer acelerómetro");
         }
+
+
 
     });

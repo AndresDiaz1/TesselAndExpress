@@ -1,1 +1,1 @@
-angular.module('tessel', ['ngRoute','home']);
+angular.module('tessel', ['ngRoute','home', 'constants']);

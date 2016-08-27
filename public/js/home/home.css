@@ -1,0 +1,19 @@
+.header{
+    background-color: cadetblue;
+}
+
+.logo {
+    height: 3em;
+}
+
+.led-section{
+    background-color: #fc8c84;
+}
+
+.light-section{
+    background-color: #ffe87c;
+}
+
+.accelerometer-section{
+    background-color: darkolivegreen;
+}

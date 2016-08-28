@@ -22,9 +22,16 @@ angular.module('home')
         }
 
         $scope.readAccelerometer=function(){
-            console.log("Leer acelerómetro");
+            $http.get(API_CONSTANTS.TesselIP + API_CONSTANTS.Accel)
+                .success(function(response){
+                    console.log("La respuesta fue: ", response)
+                }).error(function(e){
+                console.log("ocurrio un error",e);
+            });
         }
 
+        function makeGetHttpRequest(parameters){
 
+        }
 
     });
